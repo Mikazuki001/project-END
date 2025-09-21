@@ -1,3 +1,4 @@
+// db.js
 const { Pool } = require('pg');
 require('dotenv').config();
 
@@ -7,6 +8,9 @@ const pool = new Pool({
   user: process.env.PGUSER,
   password: process.env.PGPASSWORD,
   database: process.env.PGDATABASE,
+  ssl: {
+    rejectUnauthorized: false, // ❗ จำเป็นสำหรับ Render PostgreSQL
+  },
 });
 
 module.exports = pool;
