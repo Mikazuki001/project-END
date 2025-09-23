@@ -29,7 +29,7 @@ const AdminDashboardPage = () => {
             จัดการผู้ใช้งาน
           </button>
           <button style={styles.button} onClick={() => setActiveMenu('report')}>
-            รายงานข้อมูลหอพัก
+            ยืนยันข้อมูลหอพัก
           </button>
 
           <hr style={{ margin: '20px 0' }} />
