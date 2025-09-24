@@ -236,7 +236,7 @@ const handleSelectSuggestion = (dorm) => {
                 cursor: "pointer"
               }}
             >
-              สมัครสมาชิก
+              สมัคร
             </button>
           </>
         );

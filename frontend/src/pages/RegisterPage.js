@@ -23,11 +23,11 @@ const RegisterPage = () => {
     e.preventDefault();
     try {
       await axios.post(`${API}/users`, { ...form, status: 'owner' });
-      alert('สมัครสมาชิกสำเร็จ!');
+      alert('สมัครสำเร็จ!');
       navigate('/login');
     } catch (err) {
       console.error(err);
-      alert('สมัครสมาชิกไม่สำเร็จ');
+      alert('สมัครไม่สำเร็จ');
     }
   };
 
@@ -112,7 +112,7 @@ const RegisterPage = () => {
               fontWeight: 'bold',
             }}
           >
-            สมัครสมาชิก
+            สมัคร
           </button>
         </form>
       </div>
