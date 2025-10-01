@@ -561,7 +561,7 @@ case 'approvedDorms':
 )}
 
 
-      {/* ✅ Modal: Edit */}
+{/* ✅ Modal: Edit */}
 {editingDorm && (
   <div style={overlayStyle}>
     <div style={modalStyle}>
@@ -569,7 +569,9 @@ case 'approvedDorms':
       <div style={bodyStyle}>
         <div style={row}>
           <div style={col(1)}>
-            <label style={label}>ชื่อหอพัก</label>
+            <label style={label}>
+              ชื่อหอพัก <span style={{ color: "red" }}>*</span>
+            </label>
             <input
               style={input}
               value={form.dormname}
@@ -591,7 +593,9 @@ case 'approvedDorms':
 
         <div style={row}>
           <div style={col(1)}>
-            <label style={label}>ละติจูด</label>
+            <label style={label}>
+              ละติจูด <span style={{ color: "red" }}>*</span>
+            </label>
             <input
               style={input}
               value={form.lat}
@@ -599,7 +603,9 @@ case 'approvedDorms':
             />
           </div>
           <div style={col(1)}>
-            <label style={label}>ลองจิจูด</label>
+            <label style={label}>
+              ลองจิจูด <span style={{ color: "red" }}>*</span>
+            </label>
             <input
               style={input}
               value={form.long}
@@ -636,6 +642,8 @@ case 'approvedDorms':
             )}
           </div>
         </div>
+        
+
 
         {/* ✅ ระบบความปลอดภัย */}
         <div style={row}>
@@ -806,7 +814,9 @@ case 'approvedDorms':
       <div style={bodyStyle}>
         <div style={row}>
           <div style={col(1)}>
-            <label style={label}>ชื่อหอพัก</label>
+            <label style={label}>
+              ชื่อหอพัก <span style={{ color: "red" }}>*</span>
+            </label>
             <input
               style={input}
               value={addForm.dormname}
@@ -827,57 +837,61 @@ case 'approvedDorms':
         </div>
 
         <div style={row}>
-  <div style={col(1)}>
-    <label style={label}>ละติจูด</label>
-    <input
-      style={input}
-      value={addForm.lat}
-      onChange={e => setAddForm({ ...addForm, lat: e.target.value })}
-    />
-    {/* ✅ ปุ่มอธิบายวิธีการหา Lat/Long */}
-    <button
-      type="button"
-      style={{
-        marginTop: "6px",
-        backgroundColor: "#e81111ff",
-        color: "white",
-        border: "none",
-        borderRadius: "6px",
-        padding: "6px 10px",
-        cursor: "pointer",
-        fontSize: "13px"
-      }}
-      onClick={() => {
-        alert(
+          <div style={col(1)}>
+            <label style={label}>
+              ละติจูด <span style={{ color: "red" }}>*</span>
+            </label>
+            <input
+              style={input}
+              value={addForm.lat}
+              onChange={e => setAddForm({ ...addForm, lat: e.target.value })}
+            />
+            {/* ปุ่มอธิบายวิธีการหา Lat/Long */}
+            <button
+              type="button"
+              style={{
+                marginTop: "6px",
+                backgroundColor: "#e81111ff",
+                color: "white",
+                border: "none",
+                borderRadius: "6px",
+                padding: "6px 10px",
+                cursor: "pointer",
+                fontSize: "13px"
+              }}
+              onClick={() => {
+                alert(
 `วิธีนำละติจูด/ลองจิจูดจาก Google Maps:
 1. เข้า Google Maps
 2. นำเมาส์ไปชี้ตำแหน่งที่ต้องการ
 3. คลิกขวา → เลือก "พิกัด"
 4. คัดลอกตัวเลข (ละติจูด, ลองจิจูด) มาใส่ที่นี่`
-        );
-      }}
-    >
-      วิธีหาค่า ละติจูด/ลองจิจูด
-    </button>
-    <a
-      href="https://www.google.com/maps"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ display: "block", marginTop: "4px", fontSize: "13px", color: "#12ba0aff" }}
-    >
-      🌍 เปิด Google Maps
-    </a>
-  </div>
+                );
+              }}
+            >
+              วิธีหาค่า ละติจูด/ลองจิจูด
+            </button>
+            <a
+              href="https://www.google.com/maps"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "block", marginTop: "4px", fontSize: "13px", color: "#12ba0aff" }}
+            >
+              🌍 เปิด Google Maps
+            </a>
+          </div>
 
-  <div style={col(1)}>
-    <label style={label}>ลองจิจูด</label>
-    <input
-      style={input}
-      value={addForm.long}
-      onChange={e => setAddForm({ ...addForm, long: e.target.value })}
-    />
-  </div>
-</div>
+          <div style={col(1)}>
+            <label style={label}>
+              ลองจิจูด <span style={{ color: "red" }}>*</span>
+            </label>
+            <input
+              style={input}
+              value={addForm.long}
+              onChange={e => setAddForm({ ...addForm, long: e.target.value })}
+            />
+          </div>
+        </div>
 
 
         {/* ✅ สิ่งอำนวยความสะดวก */}
