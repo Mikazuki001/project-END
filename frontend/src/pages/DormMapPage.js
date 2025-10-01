@@ -178,25 +178,7 @@ const handleSelectSuggestion = (dorm) => {
 
   {/* ปุ่มขวา */}
 <div style={{ display: "flex", gap: "10px" }}>
-  {/* ✅ ปุ่มคู่มือ */}
-  <a
-    href="/คู่มือ.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      padding: "8px 16px",
-      background: "#10b981", // เขียวสวยๆ
-      color: "white",
-      border: "none",
-      borderRadius: "6px",
-      cursor: "pointer",
-      textDecoration: "none",
-    }}
-  >
-    📖 คู่มือการใช้งาน
-  </a>
-
-    {(() => {
+   {(() => {
       const user = JSON.parse(localStorage.getItem("user"));
       if (user) {
         return (
@@ -217,6 +199,23 @@ const handleSelectSuggestion = (dorm) => {
                 cursor: "pointer"
               }}
             >
+                {/* ✅ ปุ่มคู่มือ */}
+  <a
+    href="/คู่มือ.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      padding: "8px 16px",
+      background: "#10b981", // เขียวสวยๆ
+      color: "white",
+      border: "none",
+      borderRadius: "6px",
+      cursor: "pointer",
+      textDecoration: "none",
+    }}
+  >
+    📖 คู่มือการใช้งาน
+  </a>
               ไปที่ Dashboard
             </button>
             <button
