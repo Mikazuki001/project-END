@@ -555,21 +555,25 @@ export default function ManageDormsAdmin() {
                       alignItems: "center",
                     }}
                   >
-                    <input
-                      style={{
-                        ...input,
-                        width: "120px",
-                        padding: "6px 8px",
-                        fontSize: "14px",
-                      }}
-                      placeholder="ประเภทห้อง"
-                      value={r.roomtype || ""}
-                      onChange={(e) => {
-                        const rooms = [...form.rooms];
-                        rooms[idx].roomtype = e.target.value;
-                        setForm({ ...form, rooms });
-                      }}
-                    />
+                    <select
+  style={{
+    ...input,
+    width: "140px",
+    padding: "6px 8px",
+    fontSize: "14px",
+  }}
+  value={r.roomtype || ""}
+  onChange={(e) => {
+    const rooms = [...form.rooms];
+    rooms[idx].roomtype = e.target.value;
+    setForm({ ...form, rooms });
+  }}
+>
+  <option value="">เลือกประเภท</option>
+  <option value="แอร์">ห้องแอร์</option>
+  <option value="พัดลม">ห้องพัดลม</option>
+</select>
+
 
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <input
