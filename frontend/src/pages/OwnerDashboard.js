@@ -411,7 +411,7 @@ case 'approvedDorms':
   {/* ✅ ปุ่มกลับไปหน้าแผนที่ */}
   <button
     style={{ ...styles.button, backgroundColor: '#3b82f6' }}
-    onClick={() => navigate('/')}
+    onClick={() => navigate('/map')}
   >
     กลับไปหน้าแผนที่
   </button>
